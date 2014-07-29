@@ -4,7 +4,7 @@
 
 \docType{package}
 
-\title{Brecht Devleesschauwer's helper functions}
+\title{brechtdv's helper functions}
 
 \description{A suite of miscellaneous summary statistics and utils. }
 
