@@ -1,0 +1,6 @@
+export(
+  ## utils
+  collapse0, write_cb, read_cb,
+
+  ## summary statistics
+  summary_stats, mean_ci, sem, cv)
