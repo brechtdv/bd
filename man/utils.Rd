@@ -2,6 +2,8 @@
 \alias{collapse0}
 \alias{write_cb}
 \alias{read_cb}
+\alias{today}
+\alias{now}
 
 \title{Utils}
 
@@ -17,8 +19,14 @@ collapse0(\dots)
 write_cb(x, quote = FALSE, dec = ",", sep = "\t", row.names = FALSE, 
     col.names = FALSE, \dots)
 
-## read from Windows clipboard    
+## read from Windows clipboard
 read_cb(dec = ",", sep = "\t", \dots)
+
+## return today's date in yyyymmdd format
+today()
+
+## return current time
+now()
 }
 
 \arguments{
