@@ -6,14 +6,14 @@
 
 \title{brechtdv's helper functions}
 
-\description{A suite of miscellaneous summary statistics and utils. }
+\description{A suite of miscellaneous summary statistics and utils.}
 
 \details{
   \tabular{ll}{
     Package:    \tab  bd\cr
     Type:       \tab  Package\cr
-    Version:    \tab  0.0.1\cr
-    Date:       \tab  2013-07-29\cr
+    Version:    \tab  0.0.2\cr
+    Date:       \tab  2013-08-01\cr
     Authors:    \tab  Brecht Devleesschauwer\cr
     Maintainer: \tab  \email{Brecht.Devleesschauwer@UGent.be}\cr
     Depends:    \tab  R (>= 3.0.0)\cr
@@ -24,15 +24,18 @@
 Available functions in the \pkg{bd} package:
   \tabular{ll}{
     \strong{Utils}\cr
-    \code{\link{collapse0}}      \tab Collapse elements without separator.\cr
-    \code{\link{write_cb}}       \tab Write to Windows clipboard.\cr
-    \code{\link{read_cb}}        \tab Read from Windows clipboard.\cr\cr
+    \code{\link{collapse0}}       \tab Collapse elements without separator.\cr
+    \code{\link{write_cb}}        \tab Write to Windows clipboard.\cr
+    \code{\link{read_cb}}         \tab Read from Windows clipboard.\cr
+    \code{\link{today}}           \tab Return today's date in yyyymmdd format.\cr
+    \code{\link{now}}             \tab Return current time.\cr
+    \code{\link{extract_pubmed}}  \tab Extract data from PubMed file.\cr\cr
 
     \strong{Summary statistics}\cr
-    \code{\link{summary_stats}}  \tab Calculate summary statistics.\cr
-    \code{\link{mean_ci}}        \tab Calculate mean and 95\% confidence interval.\cr
-    \code{\link{sem}}            \tab Calculate standard error of the mean.\cr
-    \code{\link{cv}}             \tab Calculate coefficient of variation.\cr\cr
+    \code{\link{summary_stats}}   \tab Calculate summary statistics.\cr
+    \code{\link{mean_ci}}         \tab Calculate mean and 95\% confidence interval.\cr
+    \code{\link{sem}}             \tab Calculate standard error of the mean.\cr
+    \code{\link{cv}}              \tab Calculate coefficient of variation.\cr\cr
   }
 }
 
