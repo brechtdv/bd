@@ -195,7 +195,7 @@ function(file, what = c("TI", "AUTH", "SRC", "YEAR", "AB")) {
 ## Logit, Expit ------------------------------------------------------------#
 logit <-
 function(x) {
-  log(x / (1 - x)
+  log(x / (1 - x))
 }
 
 expit <-
