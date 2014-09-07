@@ -2,11 +2,15 @@
 ### UTILS ==================================================================#
 ###=========================================================================#
 ###-- collapse0 ................... collapse elements without separator
+###-- openwd ...................... open working directory
 ###-- write_cb .................... write to Windows clipboard
 ###-- read_cb ..................... read from Windows clipboard
 ###-- today ....................... return today's date in yyymmdd format
 ###-- now ......................... return current time
 ###-- extract_pubmed .............. extract data from PubMed file
+###-- logit ....................... log(p / (1 - p))
+###-- expit ....................... exp(x) / (1 + exp(x))
+###-- convert ..................... read and save as
 
 
 ##--------------------------------------------------------------------------#
@@ -16,12 +20,22 @@ function(...) {
   .Internal(paste0(list(...), collapse = ""))
 }
 
+
+##--------------------------------------------------------------------------#
+## Open working directory --------------------------------------------------#
+openwd <-
+function() {
+  shell.exec(getwd())
+}
+
+
 ##--------------------------------------------------------------------------#
 ## Write to Windows clipboard ----------------------------------------------#
 write_cb <-
-function(x, quote = FALSE, dec = ",", sep = "\t",
+function(x, limit = 32, quote = FALSE, dec = ",", sep = "\t",
          row.names = FALSE, col.names = FALSE, ...) {
-  write.table(x, file = "clipboard",
+  clipboard_string <- paste0("clipboard-", limit)
+  write.table(x, file = clipboard_string,
               quote = quote, dec = dec, sep = sep,
               row.names = row.names, col.names = col.names, ...)
 }
@@ -174,4 +188,49 @@ function(file, what = c("TI", "AUTH", "SRC", "YEAR", "AB")) {
 
   order <- order(match(what, c("TI", "AUTH", "SRC", "YEAR", "AB")))
   return(out[, order])
+}
+
+
+##--------------------------------------------------------------------------#
+## Logit, Expit ------------------------------------------------------------#
+logit <-
+function(x) {
+  log(x / (1 - x)
+}
+
+expit <-
+function(x) {
+  exp(x) / (1 + exp(x))
+}
+
+
+##--------------------------------------------------------------------------#
+## Read and save as --------------------------------------------------------#
+convert <-
+function(file,
+         from = c("csv2", "csv", "delim2", "delim"),
+         to = c("csv", "csv2", "delim2", "delim"), ...) {
+  from <- match.arg(from)
+  to <- match.arg(to)
+  if (from == to) stop("'from' should be different than 'to'")
+
+  ## read file
+  data <-
+    switch(from,
+           csv2 = read.csv2(file, ...),
+           csv = read.csv(file, ...),
+           delim2 = read.delim2(file, ...),
+           delim = read.delim(file, ...))
+
+  ## save as
+  file_to <- paste0("copy_", file)
+  switch(to,
+         csv2 = write.csv2(data, file_to),
+         csv = write.csv(data, file_to),
+         delim2 =
+           write.table(data, file_to,
+                       header = TRUE, sep = "\t", dec = ","),
+         delim =
+           write.table(data, file_to,
+                       header = TRUE, sep = "\t", dec = "."))
 }

@@ -1,7 +1,10 @@
 export(
   ## utils
-  collapse0, write_cb, read_cb, today, now,
+  openwd, collapse0, write_cb, read_cb, today, now,
   extract_pubmed,
 
   ## summary statistics
-  summary_stats, mean_ci, sem, cv)
+  summary_stats, mean_ci, sem, cv,
+
+  ## statistical functions
+  logit, expit)

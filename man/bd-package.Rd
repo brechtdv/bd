@@ -12,8 +12,8 @@
   \tabular{ll}{
     Package:    \tab  bd\cr
     Type:       \tab  Package\cr
-    Version:    \tab  0.0.2\cr
-    Date:       \tab  2013-08-01\cr
+    Version:    \tab  0.0.3\cr
+    Date:       \tab  2014-09-07\cr
     Authors:    \tab  Brecht Devleesschauwer\cr
     Maintainer: \tab  \email{Brecht.Devleesschauwer@UGent.be}\cr
     Depends:    \tab  R (>= 3.0.0)\cr
@@ -24,6 +24,7 @@
 Available functions in the \pkg{bd} package:
   \tabular{ll}{
     \strong{Utils}\cr
+    \code{\link{openwd}}          \tab Open working directory.\cr
     \code{\link{collapse0}}       \tab Collapse elements without separator.\cr
     \code{\link{write_cb}}        \tab Write to Windows clipboard.\cr
     \code{\link{read_cb}}         \tab Read from Windows clipboard.\cr
@@ -36,6 +37,10 @@ Available functions in the \pkg{bd} package:
     \code{\link{mean_ci}}         \tab Calculate mean and 95\% confidence interval.\cr
     \code{\link{sem}}             \tab Calculate standard error of the mean.\cr
     \code{\link{cv}}              \tab Calculate coefficient of variation.\cr\cr
+    
+    \strong{Statistical functions}\cr
+    \code{\link{logit}}           \tab Logistic transformation.\cr
+    \code{\link{expit}}           \tab Inverse logistic transformation.\cr
   }
 }
 
