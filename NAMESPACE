@@ -1,10 +1,10 @@
 export(
   ## utils
   openwd, collapse0, write_cb, read_cb, today, now,
-  extract_pubmed,
+  extract_pubmed, convert, multiplot,
 
   ## summary statistics
-  summary_stats, mean_ci, sem, cv,
+  summary_stats, mean_ci, hpd, sem, cv,
 
   ## statistical functions
   logit, expit)

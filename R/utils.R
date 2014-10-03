@@ -11,6 +11,7 @@
 ###-- logit ....................... log(p / (1 - p))
 ###-- expit ....................... exp(x) / (1 + exp(x))
 ###-- convert ..................... read and save as
+###-- multiplot ................... plot multiple ggplot2 objects
 
 
 ##--------------------------------------------------------------------------#
@@ -233,4 +234,48 @@ function(file,
          delim =
            write.table(data, file_to,
                        header = TRUE, sep = "\t", dec = "."))
+}
+
+
+##--------------------------------------------------------------------------#
+## Plot multiple ggplot2 objects -------------------------------------------#
+
+## SOURCE
+## http://www.cookbook-r.com/Graphs/Multiple_graphs_on_one_page_%28ggplot2%29/
+
+multiplot <-
+function(..., cols = 1, layout = NULL) {
+  library(grid)
+
+  ## make a list from the ... arguments
+  plots <- list(...)
+  n_plots <- length(plots)
+
+  ## if layout is NULL, then use 'cols' to determine layout
+  if (is.null(layout)) {
+    # make the panel
+    # ncol: number of columns of plots
+    # nrow: number of rows needed, calculated from # of cols
+    layout <-
+      matrix(seq(1, cols * ceiling(n_plots/cols)),
+             ncol = cols, nrow = ceiling(n_plots/cols))
+  }
+
+  if (n_plots == 1) {
+    print(plots[[1]])
+
+  } else {
+    ## set up the page
+    grid.newpage()
+    pushViewport(viewport(layout = grid.layout(nrow(layout), ncol(layout))))
+
+    ## make each plot, in the correct location
+    for (i in seq(n_plots)) {
+      ## get the i,j matrix positions of the regions that contain this subplot
+      matchidx <- as.data.frame(which(layout == i, arr.ind = TRUE))
+
+      print(plots[[i]], vp = viewport(layout.pos.row = matchidx$row,
+                                      layout.pos.col = matchidx$col))
+    }
+  }
 }

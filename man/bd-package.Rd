@@ -12,8 +12,8 @@
   \tabular{ll}{
     Package:    \tab  bd\cr
     Type:       \tab  Package\cr
-    Version:    \tab  0.0.3\cr
-    Date:       \tab  2014-09-07\cr
+    Version:    \tab  0.0.4\cr
+    Date:       \tab  2014-10-03\cr
     Authors:    \tab  Brecht Devleesschauwer\cr
     Maintainer: \tab  \email{Brecht.Devleesschauwer@UGent.be}\cr
     Depends:    \tab  R (>= 3.0.0)\cr
@@ -30,11 +30,14 @@ Available functions in the \pkg{bd} package:
     \code{\link{read_cb}}         \tab Read from Windows clipboard.\cr
     \code{\link{today}}           \tab Return today's date in yyyymmdd format.\cr
     \code{\link{now}}             \tab Return current time.\cr
-    \code{\link{extract_pubmed}}  \tab Extract data from PubMed file.\cr\cr
+    \code{\link{extract_pubmed}}  \tab Extract data from PubMed file.\cr
+    \code{\link{convert}}         \tab Read and save as.\cr
+    \code{\link{multiplot}}       \tab Plot multiple ggplot2 objects.\cr\cr
 
     \strong{Summary statistics}\cr
     \code{\link{summary_stats}}   \tab Calculate summary statistics.\cr
     \code{\link{mean_ci}}         \tab Calculate mean and 95\% confidence interval.\cr
+    \code{\link{hpd}}             \tab Highest posterior density interval.\cr
     \code{\link{sem}}             \tab Calculate standard error of the mean.\cr
     \code{\link{cv}}              \tab Calculate coefficient of variation.\cr\cr
     

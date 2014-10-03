@@ -5,6 +5,8 @@
 \alias{read_cb}
 \alias{today}
 \alias{now}
+\alias{convert}
+\alias{multiplot}
 
 \title{Utils}
 
@@ -31,6 +33,14 @@ today()
 
 ## return current time
 now()
+
+## read and save as
+convert(file,
+        from = c("csv2", "csv", "delim2", "delim"),
+        to = c("csv", "csv2", "delim2", "delim"), \dots)
+
+## plot multiple ggplot2 objects
+multiplot(\dots, cols = 1, layout = NULL)
 }
 
 \arguments{
@@ -41,9 +51,18 @@ now()
   \item{sep}{The field separator string. Values within each row of \code{x} are separated by this string. Defaults to \code{"\t"}.}
   \item{row.names}{Either a logical value indicating whether the row names of \code{x} are to be written along with \code{x}, or a character vector of row names to be written. Defaults to \code{FALSE}.}
   \item{col.names}{Either a logical value indicating whether the column names of \code{x} are to be written along with \code{x}, or a character vector of column names to be written. Defaults to \code{FALSE}.}
+  
+  \item{file}{The name of the file which the data are to be read from.}
+  \item{from}{Original format.}
+  \item{to}{Format to which the file must be converted.}
+  
+  \item{cols}{Desired number of columns.}
+  \item{layout}{Plot layout; optional.}
+  
   \item{\dots}{For \code{collapse0}: Elements to be collapsed;
   \cr For \code{write_cb}: Other arguments to be passed to \code{\link{write.table}};
-  \cr For \code{read_cb}: Other arguments to be passed to \code{\link{read.table}}.}
+  \cr For \code{read_cb}: Other arguments to be passed to \code{\link{read.table}};
+  \cr For \code{multiplot}: ggplot2 objects.}
 }
 
 \author{\email{Brecht.Devleesschauwer@UGent.be}}

@@ -1,6 +1,7 @@
 \name{bd-summary-stats}
 \alias{summary_stats}
 \alias{mean_ci}
+\alias{hpd}
 \alias{sem}
 \alias{cv}
 
@@ -12,10 +13,13 @@ Miscellaneous summary statistics.
 
 \usage{
 ## summary statistics
-summary_stats(x, na.rm = FALSE)
+summary_stats(x, hpd = FALSE, na.rm = FALSE)
 
 ## mean and 95\% CI
 mean_ci(x, \dots)
+
+## highest posterior density interval
+hpd(x, alpha)
 
 ## standard error of the mean
 sem(x, \dots)
@@ -26,7 +30,9 @@ cv(x, \dots)
 
 \arguments{
   \item{x}{Numerical vector.}
-  \item{na.rm}{A logical value indicating whether \code{NA} values should be stripped before the computation proceeds.}
+  \item{hpd}{Logical indicating whether highest posterior density intervals should be calculated (\code{TRUE}) or equal tail intervals (\code{FALSE}).}
+  \item{na.rm}{Logical indicating whether \code{NA} values should be stripped before the computation proceeds.}
+  \item{alpha}{Specifies the 100*(1 - alpha)\% interval to compute.}
   \item{\dots}{Other arguments to be passed to other methods.}
 }
 
@@ -41,6 +47,7 @@ CV is defined as SD / mean.
 x <- rnorm(100)
 summary_stats(x)
 mean_ci(x)
+hpd(x)
 sem(x)
 cv(x)
 
