@@ -12,6 +12,8 @@
 ###-- expit ....................... exp(x) / (1 + exp(x))
 ###-- convert ..................... read and save as
 ###-- multiplot ................... plot multiple ggplot2 objects
+###-- prop_table .................. return proportional table
+###-- dropbox ..................... path to dropbox folder
 
 
 ##--------------------------------------------------------------------------#
@@ -209,8 +211,8 @@ function(x) {
 ## Read and save as --------------------------------------------------------#
 convert <-
 function(file,
-         from = c("csv2", "csv", "delim2", "delim"),
-         to = c("csv", "csv2", "delim2", "delim"), ...) {
+         from = c("csv2", "csv", "delim2", "delim", "dta"),
+         to = c("csv", "csv2", "delim2", "delim", "dta"), ...) {
   from <- match.arg(from)
   to <- match.arg(to)
   if (from == to) stop("'from' should be different than 'to'")
@@ -221,7 +223,8 @@ function(file,
            csv2 = read.csv2(file, ...),
            csv = read.csv(file, ...),
            delim2 = read.delim2(file, ...),
-           delim = read.delim(file, ...))
+           delim = read.delim(file, ...),
+           dta = foreign::read.dta(file, ...))
 
   ## save as
   file_to <- paste0("copy_", file)
@@ -233,7 +236,8 @@ function(file,
                        header = TRUE, sep = "\t", dec = ","),
          delim =
            write.table(data, file_to,
-                       header = TRUE, sep = "\t", dec = "."))
+                       header = TRUE, sep = "\t", dec = "."),
+         dta = foreign::write.dta(data, file_to))
 }
 
 
@@ -278,4 +282,22 @@ function(..., cols = 1, layout = NULL) {
                                       layout.pos.col = matchidx$col))
     }
   }
+}
+
+
+##--------------------------------------------------------------------------#
+## Return proportional table -----------------------------------------------#
+
+prop_table <-
+function(x, ...) {
+  c(table(x, ...) / length(x))
+}
+
+
+##--------------------------------------------------------------------------#
+## Path to dropbox folder --------------------------------------------------#
+
+dropbox <-
+function(dir) {
+  paste0("C:/Users/", Sys.info()["user"], "/Dropbox/", dir)
 }

@@ -12,10 +12,10 @@
   \tabular{ll}{
     Package:    \tab  bd\cr
     Type:       \tab  Package\cr
-    Version:    \tab  0.0.4\cr
-    Date:       \tab  2014-10-03\cr
+    Version:    \tab  0.0.5\cr
+    Date:       \tab  2015-07-07\cr
     Authors:    \tab  Brecht Devleesschauwer\cr
-    Maintainer: \tab  \email{Brecht.Devleesschauwer@UGent.be}\cr
+    Maintainer: \tab  \email{brechtdv@gmail.com}\cr
     Depends:    \tab  R (>= 3.0.0)\cr
     License:    \tab  GPL (>= 2)\cr
     LazyLoad:   \tab  yes\cr
@@ -32,7 +32,8 @@ Available functions in the \pkg{bd} package:
     \code{\link{now}}             \tab Return current time.\cr
     \code{\link{extract_pubmed}}  \tab Extract data from PubMed file.\cr
     \code{\link{convert}}         \tab Read and save as.\cr
-    \code{\link{multiplot}}       \tab Plot multiple ggplot2 objects.\cr\cr
+    \code{\link{multiplot}}       \tab Plot multiple ggplot2 objects.\cr
+    \code{\link{dropbox}}         \tab Path to dropbox folder.\cr\cr
 
     \strong{Summary statistics}\cr
     \code{\link{summary_stats}}   \tab Calculate summary statistics.\cr

@@ -7,6 +7,7 @@
 \alias{now}
 \alias{convert}
 \alias{multiplot}
+\alias{dropbox}
 
 \title{Utils}
 
