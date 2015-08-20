@@ -14,6 +14,7 @@
 ###-- multiplot ................... plot multiple ggplot2 objects
 ###-- prop_table .................. return proportional table
 ###-- dropbox ..................... path to dropbox folder
+###-- sanitize_specials ........... special characters to HTML/LaTeX
 
 
 ##--------------------------------------------------------------------------#
@@ -300,4 +301,41 @@ function(x, ...) {
 dropbox <-
 function(dir) {
   paste0("C:/Users/", Sys.info()["user"], "/Dropbox/", dir)
+}
+
+
+##--------------------------------------------------------------------------#
+## Translate special characters to HTML or LaTeX ---------------------------#
+
+sanitize_specials <-
+function(char, type = c("html", "latex")) {
+  type <- match.arg(type)
+
+  table <-
+    matrix(c("á", "&aacute", "\\\\'{a}",
+             "é", "&eacute", "\\\\'{e}",
+             "í", "&iacute", "\\\\'{i}",
+             "ó", "&oacute", "\\\\'{o}",
+             "ú", "&uacute", "\\\\'{u}",
+
+             "à", "&agrave", "\\\\`{a}",
+             "è", "&egrave", "\\\\`{e}",
+             "ì", "&igrave", "\\\\`{i}",
+             "ò", "&ograve", "\\\\`{o}",
+             "ù", "&ugrave", "\\\\`{u}",
+
+             "ä", "&auml", "\\\\\"{a}",
+             "ë", "&euml", "\\\\\"{e}",
+             "ï", "&iuml", "\\\\\"{i}",
+             "ö", "&ouml", "\\\\\"{o}",
+             "ü", "&uuml", "\\\\\"{u}"),
+           ncol = 3, byrow = T)
+
+  id <- ifelse(type == "html", 2, 3)
+
+  for (i in seq(nrow(table))) {
+    char <- gsub(table[i, 1], table[i, id], char)
+  }
+
+  return(char)
 }

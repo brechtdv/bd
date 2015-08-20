@@ -8,6 +8,7 @@
 \alias{convert}
 \alias{multiplot}
 \alias{dropbox}
+\alias{sanitize_specials}
 
 \title{Utils}
 
@@ -42,6 +43,9 @@ convert(file,
 
 ## plot multiple ggplot2 objects
 multiplot(\dots, cols = 1, layout = NULL)
+
+## translate special characters to HTML or LaTeX
+sanitize_specials(char, type = c("html", "latex"))
 }
 
 \arguments{
@@ -59,6 +63,9 @@ multiplot(\dots, cols = 1, layout = NULL)
   
   \item{cols}{Desired number of columns.}
   \item{layout}{Plot layout; optional.}
+
+  \item{char}{Character vector.}
+  \item{type}{Translate to \code{html} or \code{latex}.}
   
   \item{\dots}{For \code{collapse0}: Elements to be collapsed;
   \cr For \code{write_cb}: Other arguments to be passed to \code{\link{write.table}};
@@ -66,4 +73,4 @@ multiplot(\dots, cols = 1, layout = NULL)
   \cr For \code{multiplot}: ggplot2 objects.}
 }
 
-\author{\email{Brecht.Devleesschauwer@UGent.be}}
+\author{\email{brechtdv@gmail.com}}
