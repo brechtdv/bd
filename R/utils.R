@@ -328,7 +328,9 @@ function(char, type = c("html", "latex")) {
              "ë", "&euml", "\\\\\"{e}",
              "ï", "&iuml", "\\\\\"{i}",
              "ö", "&ouml", "\\\\\"{o}",
-             "ü", "&uuml", "\\\\\"{u}"),
+             "ü", "&uuml", "\\\\\"{u}",
+
+             "ø", "&oslash", "\\\\o"),
            ncol = 3, byrow = T)
 
   id <- ifelse(type == "html", 2, 3)

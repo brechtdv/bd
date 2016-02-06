@@ -1,3 +1,5 @@
+import(rmarkdown)
+
 export(
   ## utils
   openwd, collapse0, write_cb, read_cb, today, now,
@@ -9,3 +11,5 @@ export(
 
   ## statistical functions
   logit, expit)
+
+export(html_body)
