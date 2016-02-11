@@ -14,6 +14,7 @@
 ###-- multiplot ................... plot multiple ggplot2 objects
 ###-- prop_table .................. return proportional table
 ###-- dropbox ..................... path to dropbox folder
+###-- github ...................... path to github folder
 ###-- sanitize_specials ........... special characters to HTML/LaTeX
 
 
@@ -296,11 +297,20 @@ function(x, ...) {
 
 
 ##--------------------------------------------------------------------------#
-## Path to dropbox folder --------------------------------------------------#
+## Path to Dropbox folder --------------------------------------------------#
 
 dropbox <-
 function(dir) {
   paste0("C:/Users/", Sys.info()["user"], "/Dropbox/", dir)
+}
+
+
+##--------------------------------------------------------------------------#
+## Path to GitHub folder --------------------------------------------------#
+
+github <-
+function(dir) {
+  paste0("C:/Users/", Sys.info()["user"], "/Documents/GitHub/", dir)
 }
 
 

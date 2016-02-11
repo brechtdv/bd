@@ -3,7 +3,8 @@ import(rmarkdown)
 export(
   ## utils
   openwd, collapse0, write_cb, read_cb, today, now,
-  extract_pubmed, convert, multiplot, prop_table, dropbox,
+  extract_pubmed, convert, multiplot, prop_table,
+  dropbox, github,
   sanitize_specials,
 
   ## summary statistics

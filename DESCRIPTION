@@ -1,8 +1,8 @@
 Package: bd
 Type: Package
 Title: brechtdv's helper functions
-Version: 0.0.7
-Date: 2016-02-05
+Version: 0.0.8
+Date: 2016-02-11
 Authors@R: person("Brecht", "Devleesschauwer",
                   role = c("aut", "cre"),
                   email = "brechtdv@gmail.com")

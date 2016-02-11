@@ -12,8 +12,8 @@
   \tabular{ll}{
     Package:    \tab  bd\cr
     Type:       \tab  Package\cr
-    Version:    \tab  0.0.6\cr
-    Date:       \tab  2015-08-19\cr
+    Version:    \tab  0.0.8\cr
+    Date:       \tab  2016-02-11\cr
     Authors:    \tab  Brecht Devleesschauwer\cr
     Maintainer: \tab  \email{brechtdv@gmail.com}\cr
     Depends:    \tab  R (>= 3.0.0)\cr
@@ -33,7 +33,8 @@ Available functions in the \pkg{bd} package:
     \code{\link{extract_pubmed}}     \tab Extract data from PubMed file.\cr
     \code{\link{convert}}            \tab Read and save as.\cr
     \code{\link{multiplot}}          \tab Plot multiple ggplot2 objects.\cr
-    \code{\link{dropbox}}            \tab Path to dropbox folder.\cr
+    \code{\link{dropbox}}            \tab Path to Dropbox folder.\cr
+    \code{\link{github}}            \tab Path to GitHub folder.\cr
     \code{\link{sanitize_specials}}  \tab Translate special characters to HTML or LaTeX.\cr\cr
 
     \strong{Summary statistics}\cr
