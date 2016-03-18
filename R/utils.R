@@ -301,7 +301,8 @@ function(x, ...) {
 
 dropbox <-
 function(dir) {
-  paste0("C:/Users/", Sys.info()["user"], "/Dropbox/", dir)
+  paste0(gsub("\\\\", "/", Sys.getenv("USERPROFILE")),
+         "/Dropbox/", dir)
 }
 
 
@@ -310,7 +311,8 @@ function(dir) {
 
 github <-
 function(dir) {
-  paste0("C:/Users/", Sys.info()["user"], "/Documents/GitHub/", dir)
+  paste0(gsub("\\\\", "/", Sys.getenv("USERPROFILE")),
+         "Documents/GitHub/", dir)
 }
 
 

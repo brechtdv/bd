@@ -12,8 +12,8 @@
   \tabular{ll}{
     Package:    \tab  bd\cr
     Type:       \tab  Package\cr
-    Version:    \tab  0.0.8\cr
-    Date:       \tab  2016-02-11\cr
+    Version:    \tab  0.0.9\cr
+    Date:       \tab  2016-03-18\cr
     Authors:    \tab  Brecht Devleesschauwer\cr
     Maintainer: \tab  \email{brechtdv@gmail.com}\cr
     Depends:    \tab  R (>= 3.0.0)\cr
