@@ -312,7 +312,7 @@ function(dir) {
 github <-
 function(dir) {
   paste0(gsub("\\\\", "/", Sys.getenv("USERPROFILE")),
-         "Documents/GitHub/", dir)
+         "/Documents/GitHub/", dir)
 }
 
 
