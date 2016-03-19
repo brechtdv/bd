@@ -12,8 +12,8 @@
   \tabular{ll}{
     Package:    \tab  bd\cr
     Type:       \tab  Package\cr
-    Version:    \tab  0.0.9\cr
-    Date:       \tab  2016-03-18\cr
+    Version:    \tab  0.0.10\cr
+    Date:       \tab  2016-03-19\cr
     Authors:    \tab  Brecht Devleesschauwer\cr
     Maintainer: \tab  \email{brechtdv@gmail.com}\cr
     Depends:    \tab  R (>= 3.0.0)\cr
@@ -25,7 +25,7 @@ Available functions in the \pkg{bd} package:
   \tabular{ll}{
     \strong{Utils}\cr
     \code{\link{openwd}}             \tab Open working directory.\cr
-    \code{\link{collapse0}}          \tab Collapse elements without separator.\cr
+    \code{\link{collapse} }          \tab Collapse elements without separator.\cr
     \code{\link{write_cb}}           \tab Write to Windows clipboard.\cr
     \code{\link{read_cb}}            \tab Read from Windows clipboard.\cr
     \code{\link{today}}              \tab Return today's date in yyyymmdd format.\cr
@@ -33,9 +33,11 @@ Available functions in the \pkg{bd} package:
     \code{\link{extract_pubmed}}     \tab Extract data from PubMed file.\cr
     \code{\link{convert}}            \tab Read and save as.\cr
     \code{\link{multiplot}}          \tab Plot multiple ggplot2 objects.\cr
+    \code{\link{prop_table}}         \tab Return proportional table.\cr
     \code{\link{dropbox}}            \tab Path to Dropbox folder.\cr
-    \code{\link{github}}            \tab Path to GitHub folder.\cr
-    \code{\link{sanitize_specials}}  \tab Translate special characters to HTML or LaTeX.\cr\cr
+    \code{\link{github}}             \tab Path to GitHub folder.\cr
+    \code{\link{sanitize_specials}}  \tab Translate special characters to HTML or LaTeX.\cr
+    \code{\link{html_body}}          \tab RMarkdown template for HTML body only.\cr\cr
 
     \strong{Summary statistics}\cr
     \code{\link{summary_stats}}      \tab Calculate summary statistics.\cr

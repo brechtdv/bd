@@ -1,7 +1,7 @@
 ###=========================================================================#
 ### UTILS ==================================================================#
 ###=========================================================================#
-###-- collapse0 ................... collapse elements without separator
+###-- collapse .................... collapse elements without separator
 ###-- openwd ...................... open working directory
 ###-- write_cb .................... write to Windows clipboard
 ###-- read_cb ..................... read from Windows clipboard
@@ -20,9 +20,9 @@
 
 ##--------------------------------------------------------------------------#
 ## Collapse elements without separator -------------------------------------#
-collapse0 <-
+collapse <-
 function(...) {
-  .Internal(paste0(list(...), collapse = ""))
+  paste(..., sep = "", collapse = "")
 }
 
 
@@ -226,20 +226,16 @@ function(file,
            csv = read.csv(file, ...),
            delim2 = read.delim2(file, ...),
            delim = read.delim(file, ...),
-           dta = foreign::read.dta(file, ...))
+           dta = read.dta(file, ...))
 
   ## save as
   file_to <- paste0("copy_", file)
   switch(to,
          csv2 = write.csv2(data, file_to),
          csv = write.csv(data, file_to),
-         delim2 =
-           write.table(data, file_to,
-                       header = TRUE, sep = "\t", dec = ","),
-         delim =
-           write.table(data, file_to,
-                       header = TRUE, sep = "\t", dec = "."),
-         dta = foreign::write.dta(data, file_to))
+         delim2 = write.table(data, file_to, sep = "\t", dec = ","),
+         delim = write.table(data, file_to, sep = "\t", dec = "."),
+         dta = write.dta(data, file_to))
 }
 
 

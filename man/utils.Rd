@@ -1,14 +1,17 @@
 \name{bd-utils}
 \alias{openwd}
-\alias{collapse0}
+\alias{collapse}
 \alias{write_cb}
 \alias{read_cb}
 \alias{today}
 \alias{now}
 \alias{convert}
 \alias{multiplot}
+\alias{prop_table}
 \alias{dropbox}
+\alias{github}
 \alias{sanitize_specials}
+\alias{html_body}
 
 \title{Utils}
 
@@ -21,7 +24,7 @@ Miscellaneous utility functions. Note that some of these only work under Windows
 openwd()
 
 ## collapse elements without separator
-collapse0(\dots)
+collapse(\dots)
 
 ## write to Windows clipboard
 write_cb(x, limit = 32, quote = FALSE, dec = ",", sep = "\t",
@@ -38,11 +41,14 @@ now()
 
 ## read and save as
 convert(file,
-        from = c("csv2", "csv", "delim2", "delim"),
-        to = c("csv", "csv2", "delim2", "delim"), \dots)
+        from = c("csv2", "csv", "delim2", "delim", "dta"),
+        to = c("csv", "csv2", "delim2", "delim", "dta"), \dots)
 
 ## plot multiple ggplot2 objects
 multiplot(\dots, cols = 1, layout = NULL)
+
+## return proportional table
+prop_table(x, \dots)
 
 ## translate special characters to HTML or LaTeX
 sanitize_specials(char, type = c("html", "latex"))
