@@ -1,4 +1,7 @@
 ## bd
+
+[![Travis-CI Build Status](https://travis-ci.org/brechtdv/bd.svg?branch=master)](https://travis-ci.org/brechtdv/bd)
+
 ### A suite of helper functions; including utils and summary statistics.
 
 The easiest way to install the `bd` package is via the `devtools` package:
@@ -16,7 +19,7 @@ The easiest way to install the `bd` package is via the `devtools` package:
     <td> Open working directory.</td>
   </tr>
     <tr>
-    <td><code>collapse0</code></td>
+    <td><code>collapse</code></td>
     <td> Collapse elements without separator.</td>
   </tr>
     <tr>
@@ -47,14 +50,27 @@ The easiest way to install the `bd` package is via the `devtools` package:
     <td><code>multiplot</code></td>
     <td> Plot multiple ggplot2 objects.</td>
   </tr>
+  <tr>
+    <td><code>prop_table</code></td>
+    <td> Return proportional table.</td>
+  </tr>
   </tr>
     <tr>
     <td><code>dropbox</code></td>
     <td> Path to dropbox folder.</td>
   </tr>
+  </tr>
+    <tr>
+    <td><code>github</code></td>
+    <td> Path to GitHub folder.</td>
+  </tr>
   <tr>
     <td><code>sanitize_specials</code></td>
     <td>Translate special characters to HTML or LaTeX.</td>
+  </tr>
+  <tr>
+    <td><code>html_body</code></td>
+    <td>RMarkdown template for HTML body only.</td>
   </tr>
 </table>
 
