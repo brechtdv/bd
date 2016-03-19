@@ -9,7 +9,7 @@ Authors@R: person("Brecht", "Devleesschauwer",
 Author: Brecht Devleesschauwer [aut, cre]
 Maintainer: Brecht Devleesschauwer <brechtdv@gmail.com>
 Description: Miscellaneous summary statistics and utility functions.
-Depends: R (>= 3.2.0), rmarkdown
-Imports: foreign, grid
+Depends: R (>= 3.2.0)
+Imports: foreign, grid, rmarkdown
 License: GPL (>= 2)
 LazyData: yes

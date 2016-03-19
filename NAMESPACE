@@ -4,8 +4,7 @@ importFrom(grid, grid.newpage)
 importFrom(grid, grid.layout)
 importFrom(grid, pushViewport)
 importFrom(grid, viewport)
-
-import(rmarkdown)
+importFrom(rmarkdown, html_document)
 
 ## utils
 export(openwd)

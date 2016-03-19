@@ -1,7 +1,12 @@
+rmarkdown_system_file <-
+function (file) {
+  system.file(file, package = "rmarkdown")
+}
+
 html_body <-
   function() {
     base <-
-      rmarkdown::html_document(
+      html_document(
         number_sections = FALSE,
         fig_width = 7,
         fig_height = 5,
@@ -15,7 +20,7 @@ html_body <-
         mathjax = NULL,
         highlight = "default",
         theme = NULL,
-        template = rmarkdown:::rmarkdown_system_file("rmd/fragment/default.html")
+        template = rmarkdown_system_file("rmd/fragment/default.html")
       )
     
     ## remove divs
