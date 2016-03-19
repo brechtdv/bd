@@ -1,4 +1,5 @@
 importFrom(foreign, read.dta)
+importFrom(foreign, write.dta)
 importFrom(grid, grid.newpage)
 importFrom(grid, grid.layout)
 importFrom(grid, pushViewport)
