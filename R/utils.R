@@ -247,8 +247,6 @@ function(file,
 
 multiplot <-
 function(..., cols = 1, layout = NULL) {
-  library(grid)
-
   ## make a list from the ... arguments
   plots <- list(...)
   n_plots <- length(plots)
