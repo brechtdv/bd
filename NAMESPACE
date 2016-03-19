@@ -1,16 +1,34 @@
+importFrom(foreign, read.dta)
+importFrom(grid, grid.newpage)
+importFrom(grid, grid.layout)
+importFrom(grid, pushViewport)
+importFrom(grid, viewport)
+
 import(rmarkdown)
 
-export(
-  ## utils
-  openwd, collapse0, write_cb, read_cb, today, now,
-  extract_pubmed, convert, multiplot, prop_table,
-  dropbox, github,
-  sanitize_specials,
-
-  ## summary statistics
-  summary_stats, mean_ci, hpd, sem, cv,
-
-  ## statistical functions
-  logit, expit)
-
+## utils
+export(openwd)
+export(collapse)
+export(write_cb)
+export(read_cb)
+export(today)
+export(now)
+export(extract_pubmed)
+export(convert)
+export(multiplot)
+export(prop_table)
+export(dropbox)
+export(github)
+export(sanitize_specials)
 export(html_body)
+
+## summary statistics
+export(summary_stats)
+export(mean_ci)
+export(hpd)
+export(sem)
+export(cv)
+
+## statistical functions
+export(logit)
+export(expit)
