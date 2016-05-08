@@ -12,11 +12,11 @@
   \tabular{ll}{
     Package:    \tab  bd\cr
     Type:       \tab  Package\cr
-    Version:    \tab  0.0.10\cr
-    Date:       \tab  2016-03-19\cr
+    Version:    \tab  0.0.11\cr
+    Date:       \tab  2016-05-08\cr
     Authors:    \tab  Brecht Devleesschauwer\cr
     Maintainer: \tab  \email{brechtdv@gmail.com}\cr
-    Depends:    \tab  R (>= 3.0.0)\cr
+    Depends:    \tab  R (>= 3.3.0)\cr
     License:    \tab  GPL (>= 2)\cr
     LazyLoad:   \tab  yes\cr
 }
