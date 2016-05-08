@@ -356,7 +356,7 @@ function(char, type = c("html", "latex")) {
 
              "\uF8", "&oslash", "\\\\o",
 
-             "&", "&amp", "\\\\&"),
+             "&", "&amp;", "\\\\&"),
            ncol = 3, byrow = T)
 
   id <- ifelse(type == "html", 2, 3)
