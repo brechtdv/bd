@@ -355,6 +355,9 @@ function(char, type = c("html", "latex")) {
              "\uDC", "&Uuml", "\\\\\"{U}",
 
              "\uF8", "&oslash", "\\\\o",
+             
+             "\uF1", "&ntilde", "\\\\~{n}",
+             "\uD1", "&Ntilde", "\\\\~{N}",
 
              "&", "&amp;", "\\\\&"),
            ncol = 3, byrow = T)
