@@ -12,6 +12,7 @@
 \alias{github}
 \alias{sanitize_specials}
 \alias{html_body}
+\alias{readxl}
 
 \title{Utils}
 
@@ -52,6 +53,9 @@ prop_table(x, \dots)
 
 ## translate special characters to HTML or LaTeX
 sanitize_specials(char, type = c("html", "latex"))
+
+## read Excel file as data.frame
+readxl(\dots)
 }
 
 \arguments{
@@ -76,7 +80,8 @@ sanitize_specials(char, type = c("html", "latex"))
   \item{\dots}{For \code{collapse0}: Elements to be collapsed;
   \cr For \code{write_cb}: Other arguments to be passed to \code{\link{write.table}};
   \cr For \code{read_cb}: Other arguments to be passed to \code{\link{read.table}};
-  \cr For \code{multiplot}: ggplot2 objects.}
+  \cr For \code{multiplot}: ggplot2 objects;
+  \cr For \code{readxl}: Arguments to be passed to \code{read_excel}.}
 }
 
 \author{\email{brechtdv@gmail.com}}

@@ -1,15 +1,15 @@
 Package: bd
 Type: Package
 Title: brechtdv's helper functions
-Version: 0.0.11
-Date: 2016-05-08
+Version: 0.0.12
+Date: 2017-10-17
 Authors@R: person("Brecht", "Devleesschauwer",
                   role = c("aut", "cre"),
                   email = "brechtdv@gmail.com")
 Author: Brecht Devleesschauwer [aut, cre]
 Maintainer: Brecht Devleesschauwer <brechtdv@gmail.com>
 Description: Miscellaneous summary statistics and utility functions.
-Depends: R (>= 3.3.0)
-Imports: foreign, grid, rmarkdown
+Depends: R (>= 3.4.0)
+Imports: foreign, grid, rmarkdown, readxl
 License: GPL (>= 2)
 LazyData: yes

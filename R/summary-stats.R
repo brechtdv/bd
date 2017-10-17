@@ -41,9 +41,7 @@ function(x, hpd = FALSE, na.rm = FALSE) {
 ## Calculate mean and 95% confidence interval ------------------------------#
 mean_ci <-
 function(x, ...) {
-  stats <- summary_stats(x, ...)
-  mean_ci <- stats[c(1, 3, 6)]
-  return(mean_ci)
+  c(mean = mean(x, ...), quantile(x, probs = c(0.025, 0.975), ...))
 }
 
 

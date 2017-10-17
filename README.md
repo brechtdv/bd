@@ -72,6 +72,11 @@ The easiest way to install the `bd` package is via the `devtools` package:
     <td><code>html_body</code></td>
     <td>RMarkdown template for HTML body only.</td>
   </tr>
+   <tr>
+    <td><code>readxl</code></td>
+    <td>Read Excel file using <code>readxl</code> package, but save as <code>data.frame</code> instead of <code>tibble</code>.</td>
+  </tr>
+
 </table>
 
 ##### Summary statistics
@@ -109,5 +114,13 @@ The easiest way to install the `bd` package is via the `devtools` package:
   <tr>
     <td><code>expit</code></td>
     <td> Inverse logistic transformation.</td>
+  </tr>
+  <tr>
+    <td><code>rgamma2</code></td>
+    <td>Simulate random Gamma deviates with specified mean and standard deviation.</td>
+  </tr>
+  <tr>
+    <td><code>rlnorm2</code></td>
+    <td>Simulate random log-normal deviates with specified mean and standard deviation.</td>
   </tr>
 </table>

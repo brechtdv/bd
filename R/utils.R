@@ -16,7 +16,7 @@
 ###-- dropbox ..................... path to dropbox folder
 ###-- github ...................... path to github folder
 ###-- sanitize_specials ........... special characters to HTML/LaTeX
-
+###-- readxl ...................... read excel file as data.frame
 
 ##--------------------------------------------------------------------------#
 ## Collapse elements without separator -------------------------------------#
@@ -369,4 +369,16 @@ function(char, type = c("html", "latex")) {
   }
 
   return(char)
+}
+
+
+##--------------------------------------------------------------------------#
+## Read Excel file as data.frame -------------------------------------------#
+
+readxl <-
+function(...) {
+  xl <- read_excel(...)
+  class(xl) <- "data.frame"
+  colnames(xl) <- make.names(colnames(xl))
+  return(xl)
 }

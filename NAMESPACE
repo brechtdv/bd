@@ -1,3 +1,5 @@
+import(readxl)
+
 importFrom(foreign, read.dta)
 importFrom(foreign, write.dta)
 importFrom(grid, grid.newpage)
@@ -21,6 +23,7 @@ export(dropbox)
 export(github)
 export(sanitize_specials)
 export(html_body)
+export(readxl)
 
 ## summary statistics
 export(summary_stats)
@@ -32,3 +35,5 @@ export(cv)
 ## statistical functions
 export(logit)
 export(expit)
+export(rgamma2)
+export(rlnorm2)
