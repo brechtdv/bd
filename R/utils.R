@@ -389,8 +389,8 @@ function(...) {
 ## Source file without printing/plotting -----------------------------------#
 
 quiet_source <-
-function(f) { 
+function(file) { 
   sink(tempfile()) 
   on.exit(sink()) 
-  invisible(force(source(f))) 
+  invisible(force(source(file))) 
 }
