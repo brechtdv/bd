@@ -10,6 +10,6 @@ Author: Brecht Devleesschauwer [aut, cre]
 Maintainer: Brecht Devleesschauwer <brechtdv@gmail.com>
 Description: Miscellaneous summary statistics and utility functions.
 Depends: R (>= 3.4.0)
-Imports: foreign, grid, rmarkdown, readxl
+Imports: foreign, grid, rmarkdown, readxl, stats, utils
 License: GPL (>= 2)
 LazyData: yes
