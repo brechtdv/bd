@@ -13,6 +13,7 @@
 \alias{sanitize_specials}
 \alias{html_body}
 \alias{readxl}
+\alias{quiet_source}
 
 \title{Utils}
 
@@ -56,6 +57,9 @@ sanitize_specials(char, type = c("html", "latex"))
 
 ## read Excel file as data.frame
 readxl(\dots)
+
+## source file without printing/plotting
+quiet_source(file)
 }
 
 \arguments{
@@ -67,7 +71,7 @@ readxl(\dots)
   \item{row.names}{Either a logical value indicating whether the row names of \code{x} are to be written along with \code{x}, or a character vector of row names to be written. Defaults to \code{FALSE}.}
   \item{col.names}{Either a logical value indicating whether the column names of \code{x} are to be written along with \code{x}, or a character vector of column names to be written. Defaults to \code{FALSE}.}
   
-  \item{file}{The name of the file which the data are to be read from.}
+  \item{file}{File name.}
   \item{from}{Original format.}
   \item{to}{Format to which the file must be converted.}
   

@@ -24,6 +24,7 @@ export(github)
 export(sanitize_specials)
 export(html_body)
 export(readxl)
+export(quiet_source)
 
 ## summary statistics
 export(summary_stats)

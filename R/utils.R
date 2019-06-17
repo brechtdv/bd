@@ -17,6 +17,7 @@
 ###-- github ...................... path to github folder
 ###-- sanitize_specials ........... special characters to HTML/LaTeX
 ###-- readxl ...................... read excel file as data.frame
+###-- quiet_source ................ source file without printing/plotting
 
 ##--------------------------------------------------------------------------#
 ## Collapse elements without separator -------------------------------------#
@@ -381,4 +382,15 @@ function(...) {
   class(xl) <- "data.frame"
   colnames(xl) <- make.names(colnames(xl))
   return(xl)
+}
+
+
+##--------------------------------------------------------------------------#
+## Source file without printing/plotting -----------------------------------#
+
+quiet_source <-
+function(f) { 
+  sink(tempfile()) 
+  on.exit(sink()) 
+  invisible(force(source(f))) 
 }

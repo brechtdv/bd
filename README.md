@@ -76,6 +76,10 @@ The easiest way to install the `bd` package is via the `devtools` package:
     <td><code>readxl</code></td>
     <td>Read Excel file using <code>readxl</code> package, but save as <code>data.frame</code> instead of <code>tibble</code>.</td>
   </tr>
+    <tr>
+    <td><code>quiet_source</code></td>
+    <td>Source a file without printing or plotting.</td>
+  </tr>
 
 </table>
 
