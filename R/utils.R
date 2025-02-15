@@ -1,23 +1,24 @@
 ###=========================================================================#
 ### UTILS ==================================================================#
 ###=========================================================================#
-###-- collapse .................... collapse elements without separator
-###-- openwd ...................... open working directory
-###-- write_cb .................... write to Windows clipboard
-###-- read_cb ..................... read from Windows clipboard
-###-- today ....................... return today's date in yyymmdd format
-###-- now ......................... return current time
-###-- extract_pubmed .............. extract data from PubMed file
-###-- logit ....................... log(p / (1 - p))
-###-- expit ....................... exp(x) / (1 + exp(x))
-###-- convert ..................... read and save as
-###-- multiplot ................... plot multiple ggplot2 objects
-###-- prop_table .................. return proportional table
-###-- dropbox ..................... path to dropbox folder
-###-- github ...................... path to github folder
-###-- sanitize_specials ........... special characters to HTML/LaTeX
-###-- readxl ...................... read excel file as data.frame
-###-- quiet_source ................ source file without printing/plotting
+###-- collapse .................. collapse elements without separator
+###-- openwd .................... open working directory
+###-- write_cb .................. write to Windows clipboard
+###-- read_cb ................... read from Windows clipboard
+###-- today ..................... return today's date in yyymmdd format
+###-- now ....................... return current time
+###-- extract_pubmed ............ extract data from PubMed file
+###-- logit ..................... log(p / (1 - p))
+###-- expit ..................... exp(x) / (1 + exp(x))
+###-- convert ................... read and save as
+###-- multiplot ................. plot multiple ggplot2 objects
+###-- prop_table ................ return proportional table
+###-- dropbox ................... path to dropbox folder
+###-- github .................... path to github folder
+###-- sanitize_specials ......... special characters to HTML/LaTeX
+###-- readxl .................... read excel file as data.frame
+###-- quiet_source .............. source file without printing/plotting
+###-- render_today .............. render R script and save with today's date
 
 ##--------------------------------------------------------------------------#
 ## Collapse elements without separator -------------------------------------#
@@ -393,4 +394,16 @@ function(file) {
   sink(tempfile()) 
   on.exit(sink()) 
   invisible(force(source(file))) 
+}
+
+##--------------------------------------------------------------------------#
+## Render script and add today's date --------------------------------------#
+render_today <-
+function(input, ...) {
+  rmarkdown::render(
+    input,
+    output_file =
+      paste(
+        gsub("\\.r", "", input, ignore.case = TRUE), today(), sep = "-"),
+    ...)
 }
