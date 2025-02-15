@@ -405,5 +405,6 @@ function(input, ...) {
     output_file =
       paste(
         gsub("\\.r", "", input, ignore.case = TRUE), today(), sep = "-"),
-    ...)
+    ...),
+    envir = globalenv()
 }
